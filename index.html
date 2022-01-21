@@ -92,6 +92,10 @@
               <ion-icon name="search-outline"></ion-icon>
             </label>
           </div>
+          <div class="theme-toggler">
+            <ion-icon class="active" name="sunny-outline"></ion-icon>
+            <ion-icon name="moon-outline"></ion-icon>
+          </div>
           <!-- userImg -->
           <div class="user">
             <img src="user.jpg" alt="" />
@@ -317,6 +321,20 @@
     ></script>
 
     <script>
+      // Theme Toggle
+      const themeToggler = document.querySelector(".theme-toggler");
+      console.log(themeToggler);
+      themeToggler.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme-variables");
+
+        themeToggler
+          .querySelector("ion-icon:nth-child(1)")
+          .classList.toggle("active");
+        themeToggler
+          .querySelector("ion-icon:nth-child(2)")
+          .classList.toggle("active");
+      });
+
       // MenuToggle
       let toggle = document.querySelector(".toggle");
       let navigation = document.querySelector(".navigation");

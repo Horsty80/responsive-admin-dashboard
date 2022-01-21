@@ -14,7 +14,13 @@
   --black1: #222;
   --black2: #999;
 }
-
+.dark-theme-variables {
+  --blue: #181a1e;
+  --white: #999;
+  --grey: #edeffd;
+  --black1: #222;
+  --black2: #999;
+}
 body {
   min-height: 100vh;
   overflow-x: hidden;
@@ -420,6 +426,29 @@ body {
   color: var(--white);
 }
 
+/* theme toggler */
+.theme-toggler {
+  background: var(--grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.theme-toggler ion-icon {
+  font-size: 1.2em;
+  padding: 0px 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggler ion-icon.active {
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 4px;
+}
 /* responsive  design */
 
 @media (max-width: 991px) {
